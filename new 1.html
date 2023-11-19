@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Apple Variety in Jammu & Kashmir</title>
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <canvas id="appleChart" width="400" height="400"></canvas>
+
+    <script>
+        // Sample data of apple varieties and their quantities
+        const appleData = {
+            labels: ['Red Delicious', 'Golden Delicious', 'Ambri', 'American Trel', 'McIntosh'],
+            datasets: [{
+                label: 'Apple Varieties in Jammu & Kashmir',
+                data: [30, 25, 20, 15, 10], // Sample quantities
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.7)',
+                    'rgba(255, 159, 64, 0.7)',
+                    'rgba(255, 205, 86, 0.7)',
+                    'rgba(75, 192, 192, 0.7)',
+                    'rgba(54, 162, 235, 0.7)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        // Get the canvas element
+        const ctx = document.getElementById('appleChart').getContext('2d');
+
+        // Create the pie chart
+        const myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: appleData,
+        });
+    </script>
+</body>
+
+</html>
